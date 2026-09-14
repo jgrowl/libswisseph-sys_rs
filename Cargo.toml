@@ -1,14 +1,14 @@
 [package]
-name = "libswisseph-sys"
-version = "0.1.2"
-links = "libswisseph"
+name = "swisseph-sys"
+version = "0.2.0"
+links = "swisseph"
 build = "build.rs"
 edition = "2021"
-authors = ["Jon <jonrowlands83@gmail.com>"]
+authors = ["Sawfan <sawfan@sawfan.com>"]
 description = "Rust system wrapper for swisseph C library"
-repository = "https://github.com/jgrowl/libswisseph-sys_rs"
+repository = "https://github.com/sawfan/libswisseph-sys_rs"
 license = "AGPL-3.0-only"
-keywords = ["ephemeris", "astronomy", "astrology", "zodiac"]
+keywords = ["ephemeris", "astronomy", "astrology"]
 exclude = [
     "libswisseph/doc",
     "libswisseph/windows",
@@ -18,6 +18,8 @@ exclude = [
 ]
 
 [features]
+default = []
+vfs = []
 wasi = []
 
 [build-dependencies]

@@ -1,3 +1,5 @@
+#![allow(clippy::all)]
+
 //! WASI-in-the-browser Swiss Ephemeris demo.
 //!
 //! This example is intended to be compiled to `wasm32-wasip1` and loaded by the
@@ -8,7 +10,7 @@
 use std::cell::RefCell;
 use std::ffi::{c_char, CStr, CString};
 
-use libswisseph_sys::raw;
+use swisseph_sys::raw;
 
 thread_local! {
     static LAST_ERROR: RefCell<[u8; 512]> = RefCell::new([0; 512]);
