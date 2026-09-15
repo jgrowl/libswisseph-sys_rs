@@ -277,6 +277,9 @@ fn main() {
     }
 
     if feature_vfs || feature_wasi {
+        if feature_wasi {
+            cfg.define("SE_USE_VFS", None);
+        }
         added_files += add_required_c_files(&mut cfg, LIBSWISSEPH_DIR, VFS_C_FILES);
 
         if is_wasi_target {
